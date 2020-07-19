@@ -1,0 +1,1 @@
+web:gunicorn promarket.wsgi --log-file -
