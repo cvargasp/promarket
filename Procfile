@@ -1,1 +1,1 @@
-web:gunicorn promarket.wsgi --log-file -
+web: gunicorn promarket.wsgi --log-file -
