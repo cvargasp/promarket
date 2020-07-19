@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
 {% load static %}
-{% block title %}{{ section.title }}{% endblock %}
+{% block title %}Pro Market{% endblock %}
 
 {% block content %}
-    <div class="parallax">
+
+    <!-- <div class="parallax">
         <div class="container h-100">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-12 text-center">
@@ -11,21 +12,151 @@
                 </div>
             </div>
         </div>
-    </div>
-    <section class="second">
+    </div> -->
+    <section>
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active home d-flex align-items-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 text-center">
+                                <img src="{%static 'img/pro_market_logo.png' %}" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item home2 d-flex align-items-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-4 text-center">
+                                <img src="{%static 'img/pro_market_logo.png' %}" width="100%">
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <img src="{%static 'img/sozio_logo.png' %}" width="100%">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- <div class="col text-center">
+                                <p>Pro Market distribuidor exclusivo de Sozio Inc.</p>
+                                <p>En Chile, especialista en esencias de fragancias a nivel global.</p>
+                            </div> -->
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Pro Market distribuidor exclusivo de Sozio Inc.</h5>
+                            <p>En Chile, especialista en esencias de fragancias a nivel global.</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
-                <div class="col-10 mt-5">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi veritatis harum qui iure tenetur eveniet libero odit ullam numquam blanditiis, ipsa sapiente temporibus laboriosam voluptas odio nam fuga rerum dolor.
+                <div class="col-12 mt-5">
+                    <h1>La Empresa</h1>
+                    <p style="display: inline; font-size: 24px; color: #249b8b;">• </p><hr>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end mt-5">
+                <div class="col-11">
+                    Fragancias de alta calidad, innovadoras y creativas de acuerdo a lo que tus consumidores necesitan.
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                <div class="col text-center">
+                    <a href="{% url 'about'%}" class="btn btn-more">Ver mas</a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col text-right">
+                    <hr><p style="display: inline; font-size: 24px; color: #249b8b;"> •</p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="third">
-
+    <section>
+        <div class="fragrances">            
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <h1>Fragancias</h1>
+                    <p style="display: inline; font-size: 24px; color: #249b8b;">• </p><hr>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end mt-5">
+                <div class="col-11">
+                    Te traemos la esencia de fragancia precisa para tu desarrollo.
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                <div class="col text-center">
+                    <a href="{% url 'fragrances'%}" class="btn btn-more">Ver mas</a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col text-right">
+                    <hr><p style="display: inline; font-size: 24px; color: #249b8b;"> •</p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="fourth">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium cupiditate aliquam aliquid sed aperiam ab, pariatur quia omnis fugit voluptas optio ipsam, consequatur neque reiciendis fuga! Ab corporis ipsum quod.</p>
+    <section>
+        <div class="services">            
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <h1>Servicios</h1>
+                    <p style="display: inline; font-size: 24px; color: #249b8b;">• </p><hr>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end mt-5">
+                <div class="col-11">
+                    Compromiso, transparencia y apoyo conjunto para lograr un desarrollo de producto de excelencia.
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                <div class="col text-center">
+                    <a href="{% url 'services'%}" class="btn btn-more">Ver mas</a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col text-right">
+                    <hr><p style="display: inline; font-size: 24px; color: #249b8b;"> •</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="contact">            
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <h1>Contacto</h1>
+                    <p style="display: inline; font-size: 24px; color: #249b8b;">• </p><hr>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-end mt-5">
+                <div class="col-11">
+                    Completa tus datos, requerimiento y te contactaremos.
+                </div>
+            </div>
+            <div class="row justify-content-center mt-5 mb-5">
+                <div class="col text-center">
+                    <a href="{% url 'contact'%}" class="btn btn-more">Ver mas</a>
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col text-right">
+                    <hr><p style="display: inline; font-size: 24px; color: #249b8b;"> •</p>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}
 
