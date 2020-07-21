@@ -3,24 +3,51 @@
 {% block title %}Pro Market | Contacto{% endblock %}
 {% load crispy_forms_tags %}
 {% block content %}
-<section id="contact" class=" contact d-flex align-items-center">
+<section id="contact" class="contact d-flex align-items-center">
         <div class="container-fluid ">
             <div class="row justify-content-center">        
                 <div class="col-12 text-center mb-4" data-aos="fade-down" data-aos-duration="1500">
                     <h1>Contacto</h1>
                 </div>
-                </div>
             </div>
         </div>
     </section>
 <div class="container mt-5">
-    <div class="row justify-content-md-center">
-        <div class="col-8">
-            <form>
+    <div class="row">
+        <div class="col text-center">
+            <p>Completa los datos del siguiente formulario, indicando empresa y proyecto en el mensaje.</p>
+            <p>Te contactaremos a la brevedad.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-10 col-sm-8">
+            <form method="post">
                 {% csrf_token %}
-                {{ form|crispy }}
-                <input class="btn send-btn" type="submit" value="Enviar">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                         {{ form.name|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                         {{ form.email|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                         {{ form.company|as_crispy_field }}
+                    </div>
+                    <div class="col-12 col-sm-6">
+                         {{ form.number|as_crispy_field }}
+                    </div>
+                </div>
+                {{ form.message|as_crispy_field }}
+                <input class="btn send-btn btn-block" type="submit" value="Enviar">
             </form>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col text-center">
+            <p>Si te quieres contactar directamente, escribe a <a href="mailto:contacto@pro-market.cl" class="social">contacto@pro-market.cl</a> o <a href="mailto:marianne@pro-market.cl" class="social">marianne@pro-market.cl</a> o llámanos al <a class="social" href="tel:+56935616155"><i class="fab fa-whatsapp"></i>
+            +569 8289 9664</a>, o via whatsapp al mismo numero.</p>
         </div>
     </div>
 </div>

@@ -2,6 +2,7 @@ from django import forms
 from django.http import HttpResponse
 from django.template import loader
 from django.shortcuts import render
+from django.core.mail import send_mail
 
 class ContactForm(forms.Form):
 	name = forms.CharField(label="Nombre")
@@ -23,6 +24,18 @@ def services(request):
     return render(request, "services.html")
 
 def contact(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        company = request.POST['company']
+        phone = request.POST['number']
+        message = request.POST['message']
+        send_mail(
+            name + ' - ' + company + '-' + phone, # subject
+            message, # message
+            email, # from email
+            ['contacto@pro-market.cl', 'marianne@pro-market.cl'], # To email
+            )
     return render(request, "contact.html", {
     		"form":ContactForm(),
     	})

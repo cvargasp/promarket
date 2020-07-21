@@ -23,7 +23,7 @@ nav.navbar {
 
 /* PARALLAX */
 
-.home, .home2, .fragrances, .services, .contact{
+.home, .home2, .about, .fragrances, .services, .contact{
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -31,45 +31,43 @@ nav.navbar {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
+    padding-top: 56px;
 }
 
-.fragrances, .services, .contact{
+.about,.fragrances, .services, .contact{
     height: 60vh;
 }
 
 .home{
-    background-image: url('../img/lavanda.jpg');
+    background-image: url('../img/section/lavender.jpg');
 }
 
 .home2{
-    background-image: url('../img/bottle_purple.png');
+    background-image: url('../img/section/white_flowers.jpg');
+}
+
+.about{
+    background-image: url('../img/section/about.png');
+}
+
+.about h1{
+    color: white;
 }
 
 .fragrances{
-    background-image: url('../img/fragrances.jpg');
+    background-image: url('../img/section/fragrances.jpg');
 }
 
 .services{
-    background-image: url('../img/services.jpg');
+    background-image: url('../img/section/services.jpg');
 }
 
 .contact{
-    background-image: url('../img/contact.jpg');
+    background-image: url('../img/section/contact.jpg');
 }
 
 .home2 p, .home2 h5{
     color: black;
-}
-
-#about{
-    width: 100%;
-    height: 60vh;
-    background-image: url('../img/essence-bottle-put-on-wooden-plate-near-rose-petals-4041386.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    position: relative;
 }
 
 .parallax-text{
@@ -128,4 +126,18 @@ hr{
 footer{
     color: white;
     background-color: #666;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+.social, .social:hover{
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
 }

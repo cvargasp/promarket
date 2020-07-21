@@ -17,9 +17,6 @@ from django.contrib import admin
 from django.urls import path
 from promarket.views import home, about, fragrances, services, contact
 
-from django.config import settings
-from django.config.urls.static import static
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
@@ -27,4 +24,4 @@ urlpatterns = [
     path('fragancias/', fragrances, name = 'fragrances'),
     path('servicios/', services, name = 'services'),
     path('contacto/', contact, name = 'contact')
-] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+]
